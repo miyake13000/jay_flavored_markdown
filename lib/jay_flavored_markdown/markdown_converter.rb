@@ -830,7 +830,7 @@ class JayFillColumns < HTML::Pipeline::TextFilter
     #                         ^
     # Example2: " (A) This is ...."
     #                ^
-    if /(\A\s*([^\s]+ ::|\(.+\)) +)/ =~ str
+    if /(\A\s*([^\s]+ ::|\(.*?\)) +)/ =~ str
       return str_mb_width($1)
     else
       return 0
